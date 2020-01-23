@@ -1,0 +1,10 @@
+.custom-header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  & nav .selected {
+    font-weight: 700;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,6 @@
+<div class="row top-header">
+    Top Courses
+</div>
+<div *ngFor="let courseDetails of coursesDetails | async" class="row">
+    <app-course-details [courseDetails]='courseDetails'></app-course-details>
+</div>
