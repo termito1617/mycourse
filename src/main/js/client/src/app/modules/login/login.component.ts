@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { UserSignUpForm } from 'src/app/shared/model/user-sign-up-form';
 
 @Component({
@@ -14,6 +15,6 @@ export class LoginComponent implements OnInit {
   }
 
   processSignUp(userSigUpForm: UserSignUpForm) {
-    console.log(userSigUpForm);
+    
   }
 }

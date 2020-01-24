@@ -1,6 +1,16 @@
-<div class="row top-header">
+<div class="row top-row">
+  <div class="top-header" sticky offset=10 [sticky-end]='stickyEnd'>
     Top Courses
+  </div>
 </div>
 <div *ngFor="let courseDetails of coursesDetails | async" class="row">
-    <app-course-details [courseDetails]='courseDetails'></app-course-details>
+  <app-course-details [courseDetails]='courseDetails'></app-course-details>
 </div>
+<div #stickyEnd></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

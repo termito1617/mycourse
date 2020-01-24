@@ -1,15 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MustMatchDirective } from './directives/must-match.directive';
-import { CourseService } from './services/course.service';
 import { HttpClientModule } from '@angular/common/http';
 
+import { MustMatchDirective } from './directives/must-match.directive';
+import { StickyDirective } from './directives/sticky.directive';
+import { CourseService } from './services/course.service';
+
 @NgModule({
-  declarations: [MustMatchDirective],
+  declarations: [
+    MustMatchDirective, StickyDirective
+  ],
   imports: [
     CommonModule, HttpClientModule
   ],
-  exports: [MustMatchDirective],
-  providers: [ CourseService ]
+  exports: [
+    MustMatchDirective, StickyDirective
+  ],
+  providers: [ 
+    CourseService 
+  ]
 })
 export class CoreModule { }

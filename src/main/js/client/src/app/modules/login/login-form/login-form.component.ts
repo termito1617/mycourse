@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+
 import { UserSignUpForm } from 'src/app/shared/model/user-sign-up-form';
 
 @Component({
@@ -21,15 +22,15 @@ export class LoginFormComponent implements OnInit {
   }
 
   open() {
-      this.isOpened = true;
+    this.isOpened = true;
   }
 
   close() {
-      this.isOpened = false;
-      return false;
+    this.isOpened = false;
+    return false;
   }
 
   submit() {
-      this.signUpEvent.emit(this.form);
+    this.signUpEvent.emit(this.form);
   }
 }

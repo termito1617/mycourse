@@ -11,27 +11,25 @@ import { NG_VALIDATORS, Validator, ValidationErrors, FormGroup } from '@angular/
 })
 export class MustMatchDirective implements Validator {
 
-  @Input('appMustMatch') mustMatch: string[] = [];
+  @Input('appMustMatch')
+  mustMatch: string[] = [];
 
   validate(formGroup: FormGroup): ValidationErrors {
     const control = formGroup.controls[this.mustMatch[0]];
     const matchingControl = formGroup.controls[this.mustMatch[1]];
 
-    // return null if controls haven't initialised yet
     if (!control || !matchingControl) {
       return null;
     }
 
-    // return null if another validator has already found an error on the matchingControl
     if (matchingControl.errors && !matchingControl.errors.mustMatch) {
-        return null;
+      return null;
     }
 
-    // set error on matchingControl if validation fails
     if (control.value !== matchingControl.value) {
-        matchingControl.setErrors({ mustMatch: true });
+      matchingControl.setErrors({ mustMatch: true });
     } else {
-        matchingControl.setErrors(null);
+      matchingControl.setErrors(null);
     }
   }
 }

@@ -1,19 +1,21 @@
 <div class="card mb-3">
-    <div class="row no-gutters">
-      <div class="col-md-3">
-        <img src="{{courseDetails.thumbnailLink}}" class="course-image">
-      </div>
-      <div class="col-md-9">
-        <div class="card-body">
-          <h5 class="card-title">{{courseDetails.title}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{courseDetails.authors.join(', ')}}</h6>
-          <p class="card-text"> {{courseDetails.description | truncate:255}}</p>
-          <p class="card-text">
-            <span *ngFor='let idx of [1,2,3,4,5]' class="fa fa-star" [ngClass]="{ 'checked' : idx <= courseDetails.rating.avg}"></span>
-            <sub class="votes">({{courseDetails.rating.votesNumber}})</sub>
-            <span *ngFor='let tag of courseDetails.tags' class="float-right badge badge-primary course-tag">{{ tag }}</span>
-          </p>
-        </div>
+  <div class="row no-gutters">
+    <div class="col-md-3">
+      <img src="{{courseDetails.thumbnailLink}}" class="course-image">
+    </div>
+    <div class="col-md-9">
+      <div class="card-body">
+        <h5 class="card-title">{{courseDetails.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{courseDetails.authors.join(', ')}}</h6>
+        <p class="card-text"> {{courseDetails.description | truncate:255}}</p>
+        <p class="card-text">
+          <span *ngFor='let idx of [1,2,3,4,5]' class="fa fa-star"
+            [ngClass]="{ 'checked' : idx <= courseDetails.rating.avg}"></span>
+          <sub class="votes">({{courseDetails.rating.votesNumber}})</sub>
+          <span *ngFor='let tag of courseDetails.tags'
+            class="float-right badge badge-primary course-tag">{{ tag }}</span>
+        </p>
       </div>
     </div>
   </div>
+</div>

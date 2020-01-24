@@ -32,33 +32,33 @@
 }
 
 .close {
-    position: absolute;
-    right: 16px;
-    top: 16px;
-    width: 32px;
-    height: 32px;
-    opacity: 0.3;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
 
-    &:hover {
-      opacity: 1;
-    }
-  
-    &:before, &:after {
-      position: absolute;
-      left: 15px;
-      content: ' ';
-      height: 33px;
-      width: 2px;
-      background-color: #333;
-    }
-
-    &:before {
-      transform: rotate(45deg);
-    }
-    &:after {
-      transform: rotate(-45deg);
-    }
+  &:hover {
+    opacity: 1;
   }
+
+  &:before, &:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
 
   
   .ng-valid.ng-touched:not(.registration-row)  {

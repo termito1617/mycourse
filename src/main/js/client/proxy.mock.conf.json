@@ -1,10 +1,12 @@
 [
-    {
-      "context": [
-        "/api/**/*.json"
-      ],
-      "pathRewrite": { "^/api" : "/mocks"} ,
-      "target": "http://localhost:4200",
-      "logLevel": "debug"
-    }
-  ]
+  {
+    "context": [
+      "/api/**/*.json"
+    ],
+    "pathRewrite": {
+      "^/api": "/mocks"
+    },
+    "target": "http://localhost:4200",
+    "logLevel": "debug"
+  }
+]

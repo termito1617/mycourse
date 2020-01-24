@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { CourseDetails } from '../../model/course-details';
 
 @Component({
@@ -13,8 +14,8 @@ export class CourseDetailsComponent {
 
   @Input()
   courseDetails: CourseDetails;
-  
-  constructor() { 
+
+  constructor() {
 
   }
 }
